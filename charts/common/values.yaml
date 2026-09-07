@@ -103,6 +103,10 @@ defaults:
     # -- toggle to enable/disable experimental FGA features
     enabled: true
 
+  openfga:
+    # -- the OpenFGA gRPC endpoint for authorization checks
+    endpoint: openfga.platform-mesh-system.svc.cluster.local:8081
+
   securityContext:
     # -- user id to run the container
     runAsUser: 1000

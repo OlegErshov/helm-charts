@@ -32,7 +32,7 @@ spec:
           {{- with .Values.fga.storeIDCacheTTL }}
           - --fga-store-id-cache-ttl={{ . }}
           {{- end }}
-          - --fga-target={{ .Values.fga.target }}
+          - --fga-target={{ .Values.fga.target | default (include "common.openfga.endpoint" .) }}
           {{- if .Values.terminator.kubeconfigSecret }}
           - --kcp-kubeconfig=/api-kubeconfig/kubeconfig
           {{- end }}

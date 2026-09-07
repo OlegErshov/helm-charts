@@ -18,7 +18,7 @@ A Helm chart for security-operator
 | environment | string | `"local"` | environment indicator, used for logging and observability |
 | fga.extraArgs | list | `[]` |  |
 | fga.storeIDCacheTTL | string | `""` | TTL for the OpenFGA store ID cache (e.g. 5m, 1h). Empty uses app default (5m). |
-| fga.target | string | `"openfga.platform-mesh-system.svc.cluster.local:8081"` |  |
+| fga.target | string | `""` |  |
 | generator.extraArgs | list | `[]` |  |
 | hostAliases.enabled | bool | `false` |  |
 | image.digest | string | `""` | The image digest (when set, overrides tag: registry/repository@digest) |
@@ -42,6 +42,7 @@ A Helm chart for security-operator
 | keycloakSecret | string | `"keycloak-admin"` |  |
 | kubeconfigSecret | string | `""` | The kubeconfig secret for operator and generator |
 | logLevel | string | `"info"` |  |
+| openfga | object | `{}` |  |
 | region | string | `"local"` | region indicator, used for logging and observability |
 | system.extraArgs | list | `[]` |  |
 | system.kubeconfigSecret | string | `""` |  |

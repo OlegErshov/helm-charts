@@ -108,8 +108,15 @@ generator:
 system:
   kubeconfigSecret: ""
   extraArgs: []
+
+# OpenFGA configuration - endpoint inherited from common chart by default
+openfga: {}
+  # endpoint: openfga.platform-mesh-system.svc.cluster.local:8081
+
 fga:
-  target: openfga.platform-mesh-system.svc.cluster.local:8081
+  # DEPRECATED: target is superseded by openfga.endpoint from common chart
+  # Kept for backward compatibility - if set, takes precedence
+  target: ""
   # -- TTL for the OpenFGA store ID cache (e.g. 5m, 1h). Empty uses app default (5m).
   storeIDCacheTTL: ""
   extraArgs: []

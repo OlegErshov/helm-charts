@@ -31,6 +31,7 @@ A Helm chart containing reuse templates
 | defaults.istio.gateway.name | string | `"gateway"` | name of the gateway |
 | defaults.log.level | string | `"warn"` | default log level |
 | defaults.metrics.port | int | `9090` | metrics port |
+| defaults.openfga.endpoint | string | `"openfga.platform-mesh-system.svc.cluster.local:8081"` | the OpenFGA gRPC endpoint for authorization checks |
 | defaults.operator.leaderElect | bool | `true` | by default operators participate in leader election |
 | defaults.operator.maxConcurrentReconciles | int | `10` | number of concurrent reconciles per controller |
 | defaults.operator.shutdownTimeout | string | `"1m"` | duration on how long the operator waits before shutting down |

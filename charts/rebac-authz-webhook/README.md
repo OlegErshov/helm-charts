@@ -26,7 +26,7 @@ A Helm chart for Kubernetes
 | istio.enabled | bool | `false` |  |
 | kcp.apiExportEndpointSliceName | string | `""` | kcp APIExportEndpointSliceName to watch. Empty string means auto-discover all slices |
 | kcp.kubeconfig.secret | string | `"rebac-authz-webhook-kubeconfig"` |  |
-| openfga.url | string | `"openfga:8081"` |  |
+| openfga.url | string | `""` | OpenFGA gRPC endpoint (inherited from common chart by default) endpoint: openfga.platform-mesh-system.svc.cluster.local:8081 DEPRECATED: 'url' is superseded by 'endpoint' - kept for backward compatibility |
 | service.annotations | object | `{}` |  |
 | service.clusterIP | string | `""` |  |
 | service.metricsPort | int | `8080` |  |

@@ -63,6 +63,11 @@ keycloak:
 jwt:
   userIdClaim: "email"
 
+# OpenFGA configuration
+openfga: {}
+  # -- OpenFGA gRPC endpoint (inherited from common chart by default)
+  # endpoint: openfga.platform-mesh-system.svc.cluster.local:8081
+
 roles:
   raw:
     roles:
