@@ -17,7 +17,6 @@ A Helm chart for security-operator
 | deployment.revisionHistoryLimit | int | `3` |  |
 | environment | string | `"local"` | environment indicator, used for logging and observability |
 | fga.extraArgs | list | `[]` |  |
-| fga.inviteKeycloakBaseUrl | string | `""` |  |
 | fga.storeIDCacheTTL | string | `""` | TTL for the OpenFGA store ID cache (e.g. 5m, 1h). Empty uses app default (5m). |
 | fga.target | string | `"openfga.platform-mesh-system.svc.cluster.local:8081"` |  |
 | generator.extraArgs | list | `[]` |  |
@@ -37,6 +36,7 @@ A Helm chart for security-operator
 | initializer.subroutines.inviteEnabled | bool | `true` | Enable InviteSubroutine (creates Invite resources for org creator) |
 | initializer.subroutines.workspaceAuthEnabled | bool | `true` | Enable WorkspaceAuthConfigurationSubroutine (JWT authentication setup) |
 | initializer.subroutines.workspaceEnabled | bool | `true` | Enable WorkspaceInitializer subroutine (FGA Store + AccountInfo setup) |
+| keycloak.baseUrl | string | `""` |  |
 | keycloak.client.secret.key | string | `"client_secret"` |  |
 | keycloak.client.secret.name | string | `"security-operator-client-secret"` |  |
 | keycloakSecret | string | `"keycloak-admin"` |  |
